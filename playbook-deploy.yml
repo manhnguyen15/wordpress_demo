@@ -2,8 +2,8 @@
 - hosts: web
 
   tasks:
-  - name: pull image
-    command: docker pull tienmanhnguyen/my-simple-wordpress
+  - name: delete old containers
+    command: docker-compose down -f docker-compose.yml -d
 
   - name: creating container
     command: docker-compose -f docker-compose.yml up -d

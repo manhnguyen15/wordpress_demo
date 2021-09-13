@@ -2,8 +2,9 @@ version: "3"
 
 services:
   wordpress:
-    image: tienmanhnguyen/my-simple-wordpress:latest
-    volumes: ['./wp-content:/var/www/html/wp-content']
+    image: wordpress:latest
+    volumes:
+      - wp_data:/home/manhnt/wordpress_demo/wp-data
     ports:
       - "8000:80"
     restart: always
@@ -12,4 +13,5 @@ services:
       WORDPRESS_DB_USER: manhnt
       WORDPRESS_DB_PASSWORD: 1234a@
       WORDPRESS_DB_NAME: wordpress
-
+volumes:
+  wp_data:

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  wordpress:
+    image: tienmanhnguyen/my-simple-wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: 10.10.10.11:33066
+      WORDPRESS_DB_USER: manhnt
+      WORDPRESS_DB_PASSWORD: 1234a@
+      WORDPRESS_DB_NAME: wordpress

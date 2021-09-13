@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
               sh '''
-                ansible-playbook -i $BUILD_PATH/inventory.yml $BUILD_PATH/playbook-build-image.yml
+              ansible-playbook -i $BUILD_PATH/inventory.yml $BUILD_PATH/playbook-build-image.yml
               '''
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
               sh '''
-                ansible-playbook -i $BUILD_PATH/inventory.yml $BUILD_PATH/playbook-deploy.yml
+              ansible-playbook -i $BUILD_PATH/inventory.yml $BUILD_PATH/playbook-deploy.yml
               '''
             }
         }

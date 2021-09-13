@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
               sh '''
+              whoami
               ansible-playbook -i $BUILD_PATH/inventory.yml $BUILD_PATH/playbook-build-image.yml
               '''
             }

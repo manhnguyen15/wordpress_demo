@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+
+  tasks:
+  - name: create docker image using Dockerfile
+    command: docker build -t my-simple-wordpress:latest .
+
+  - name: login to dockerhub
+    docker_login:
+      username: tienmanhnguyen
+      password: Mclaren2021!
+
+  - name: create tag to image
+    command: docker tag my-simple-wordpress tienmanhnguyen/my-simple-wordpress
+
+  - name: push image on to dockerhub
+    command: docker push tienmanhnguyen/my-simple-wordpress
+
+  - name: remove docker images
+    command: docker rmi my-simple-wordpress:latest tienmanhnguyen/my-simple-wordpress

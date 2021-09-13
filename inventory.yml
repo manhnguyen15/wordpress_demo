@@ -1,0 +1,2 @@
+web ansible_host=10.10.10.10 ansible_ssh_pass=1234a@ ansible_user=manhnt
+jenkins ansible_host=localhost

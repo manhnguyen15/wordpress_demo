@@ -5,10 +5,10 @@
   - name: create docker image using Dockerfile
     command: docker build -t my-simple-wordpress:latest .
 
-  - name: login to dockerhub
-    docker_login:
-      username: tienmanhnguyen
-      password: Mclaren2021!
+  #- name: login to dockerhub
+    #docker_login:
+      #username: tienmanhnguyen
+      #password: Mclaren2021!
 
   - name: create tag to image
     command: docker tag my-simple-wordpress tienmanhnguyen/my-simple-wordpress

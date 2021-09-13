@@ -2,7 +2,7 @@ pipeline {
 
     agent any
 
-    enviroment {
+    environment {
         BUILD_PATH = '/var/lib/jenkins/workspace/Deploy_on_Container_using_ansible'
     }
 

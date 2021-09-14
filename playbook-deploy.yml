@@ -5,5 +5,5 @@
   - name: delete old containers
     command: docker-compose down -f docker-compose.yml -d
 
-  - name: creating container
+  - name: create container
     command: docker-compose -f docker-compose.yml up -d
